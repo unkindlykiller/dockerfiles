@@ -1,7 +1,7 @@
-FROM xataz/nginx-php
+FROM python:3-alpine
 
-ARG VERSION_SHAARLI=0.9.1
-ARG VERSION_MATERIAL=0.9.0
+ARG VERSION_SHAARLI=0.10.4
+ARG VERSION_MATERIAL=0.10.4
 
 RUN cd /tmp \
     && wget https://github.com/shaarli/Shaarli/releases/download/v${VERSION_SHAARLI}/shaarli-v${VERSION_SHAARLI}-full.tar.gz \
