@@ -5,7 +5,7 @@ RUN cd /tmp \
 && tar xzf shaarli-v0.10.4-full.tar.gz \
 && mv /tmp/Shaarli /Shaarli \
 && cd /Shaarli && chmod +w cache pagecache data tmp \
-&& apk del --quiet --no-cache --progress --purge && rm -rf /tmp/* /var/cache/apk/* /usr/src/*
+&& apk del --quiet --no-cache --progress --purge && rm -rf /var/cache/apk/* /usr/src/*
 
 COPY nginx/sites-enabled/shaarli.conf /nginx/sites-enabled/
 
