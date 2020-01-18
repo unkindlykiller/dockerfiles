@@ -16,8 +16,7 @@ COPY startup /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/startup
 
-VOLUME /Shaarli/tpl/
-VOLUME /Shaarli/data/
+VOLUME /Shaarli
 
 ENTRYPOINT ["/usr/local/bin/startup"]
 CMD ["/bin/s6-svscan", "/etc/s6.d"]
