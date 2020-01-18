@@ -6,7 +6,7 @@ RUN cd /tmp \
 && tar xzf shaarli-v0.10.4-full.tar.gz \
 && tar xzf shaarli-material.v0.10.4.tar.gz \
 && cp -r /tmp/Shaarli/ /
-&& cp -r /tmp/material/ /Shaarli/tpl
+&& cp -r /tmp/material /Shaarli/tpl/
 
 COPY nginx/sites-enabled/shaarli.conf /nginx/sites-enabled/
 
