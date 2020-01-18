@@ -8,7 +8,6 @@ RUN cd /tmp \
 RUN cd / \
 COPY /tmp/Shaarli/* /Shaarli/ \
 COPY /tmp/material/ /Shaarli/tpl 
-RUN rm -rf /tmp/*
 
 COPY nginx/sites-enabled/shaarli.conf /nginx/sites-enabled/
 
