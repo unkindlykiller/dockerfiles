@@ -6,7 +6,7 @@ RUN cd /tmp \
 && wget https://github.com/kalvn/Shaarli-Material/releases/download/v0.10.4/shaarli-material.v0.10.4.tar.gz \
 && tar xzf shaarli-material.v0.10.4.tar.gz
 RUN cd / \
-COPY tmp/Shaarli/. /Shaarli/ \
+RUN cp -R /tmp/Shaarli/* /Shaarli/ \
 COPY tmp/material /Shaarli/tpl/ 
 
 COPY nginx/sites-enabled/shaarli.conf /nginx/sites-enabled/
