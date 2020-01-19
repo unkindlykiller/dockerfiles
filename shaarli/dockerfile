@@ -15,5 +15,6 @@ COPY nginx/sites-enabled/shaarli.conf /nginx/sites-enabled/
 COPY nginx/conf.d/*.conf /nginx/conf.d/
 COPY startup /usr/local/bin/
 RUN chmod +x /usr/local/bin/startup
+VOLUME /Shaarli/data
 ENTRYPOINT ["/usr/local/bin/startup"]
 CMD ["/bin/s6-svscan", "/etc/s6.d"]
