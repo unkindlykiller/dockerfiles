@@ -10,7 +10,8 @@ RUN cd / \
     && rm -rf v0.10.4.tar.gz Shaarli-Material-v0.10.4 \
     && cd /shaarli && chmod +w cache pagecache data tmp \
     && apk del --quiet --no-cache --progress --purge && rm -rf /tmp/* /var/cache/apk/* /usr/src/*
-
+    
+COPY datastore.php /shaarli/data/
 COPY nginx/sites-enabled/shaarli.conf /nginx/sites-enabled/
 COPY nginx/conf.d/*.conf /nginx/conf.d/
 COPY startup /usr/local/bin/
