@@ -6,7 +6,7 @@ RUN cd /tmp \
     && mv /tmp/Shaarli /shaarli \
     && wget https://github.com/kalvn/Shaarli-Material/releases/download/v0.10.4/shaarli-material.v0.10.4.tar.gz \
     && tar xzf shaarli-material.v0.10.4.tar.gz \
-    && mv /material /shaarli/tpl \
+    && mv /tmp/material /shaarli/tpl \
     && cd /shaarli && chmod +w cache pagecache data tmp \
     && apk del --quiet --no-cache --progress --purge && rm -rf /tmp/* /var/cache/apk/* /usr/src/*
     
