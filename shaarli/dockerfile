@@ -1,6 +1,6 @@
 FROM xataz/nginx-php
 
-COPY Shaarli/* /Shaarli
+COPY Shaarli/* /Shaarli/
 COPY nginx/sites-enabled/shaarli.conf /nginx/sites-enabled/
 COPY nginx/conf.d/*.conf /nginx/conf.d/
 COPY startup /usr/local/bin/
