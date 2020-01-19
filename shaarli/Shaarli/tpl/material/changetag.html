@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include="includes"}
+</head>
+<body onload="document.changetag.fromtag.focus();">
+{include="page.header"}
+<div class="container page-changetag">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form method="POST" action="" name="changetag" id="changetag" class="card">
+                <div class="card-title">Modify a tag</div>
+                <div class="card-body">
+                    <input type="hidden" name="token" value="{$token}">
+                    <p>All modifications are case sensitive.</p>
+
+                    <div class="form-entry">
+                        <label for="fromtag">Modify this tag&#8230;</label>
+                        <input type="text" name="fromtag" id="fromtag" value="{$fromtag}" 
+                            autocomplete="off" data-multiple data-minChars="1" 
+                            data-list="{loop="$tags"}{$key}, {/loop}"/>
+
+                    </div>
+                    <div class="form-entry">
+                        <label for="totag">&#8230;into this tag</label>
+                        <input type="text" name="totag" id="totag">
+                    </div>
+                    <p>{'You can also edit tags in the'|t} <a href="?do=taglist&sort=usage">{'tag list'|t}</a>.</p>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" id="button-delete" name="deletetag" class="button-raised button-alert pull-right" value="Delete tag">{'Delete'|t} tag</button>
+                    <button type="submit" name="renametag" class="button-raised pull-right" value="Rename tag">{'Rename'|t} tag</button>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{include="page.footer"}
+</body>
+</html>
